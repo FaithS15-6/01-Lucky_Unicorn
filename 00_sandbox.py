@@ -1,5 +1,5 @@
 import random
 
-for item in range(0,20):
-      number = random.randit(0, 4)
-      print(number, end="/t")
+for item in range(0, 20):
+    number = random.randint(1, 4)
+    print(number, end="/t")
