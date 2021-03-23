@@ -30,6 +30,7 @@ for item in range(0, 10):
         # item to a horse
         if chosen_num % 2 == 0:
             chosen = "horse"
+        # otherwise set it to a zebra   
         else:
             chosen = "zebra"
         balance -= 0.5
