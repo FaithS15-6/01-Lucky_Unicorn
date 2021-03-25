@@ -1,10 +1,12 @@
 import random
 # set balance for testing purposes
+
 balance = 5
 
 rounds_played = 0
 
 play_again = input("Press <Enter> to play...").lower()
+
 while play_again == "":
 
     # increase # of rounds played
@@ -40,6 +42,8 @@ while play_again == "":
             chosen = "zebra"
         balance -= 0.5
 
+    print("You got a {}, your balance is ${:.2f}".format(chosen, balance))
+    print()
 
     if balance < 1:
         # if balance is too low, exit the game and
@@ -47,7 +51,8 @@ while play_again == "":
         play_again = "xxx"
         print("Sorry you have run out of money")
     else:
-        play_again = input("Play Enter to play or 'xxx' to quit")
+        print()
+        play_again = input("Push Enter to play or 'xxx' to quit")
 
 print()
 print("Final Balance: ", balance)
