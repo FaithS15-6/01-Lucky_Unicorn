@@ -67,7 +67,7 @@ statement_generator("Congratulations you got a Unicorn", "!")
 played_before = yes_no("Have you played the game before? ")
 
 if played_before == "no":
-    instructions(" Choose a starting amount (minimum $1, maximum $10")
+    instructions()
 
 # Ask user how much they want to play with...
 how_much = num_check("How much would you like to play with? ", 0, 10)
