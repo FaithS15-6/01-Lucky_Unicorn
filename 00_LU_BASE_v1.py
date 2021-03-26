@@ -48,23 +48,26 @@ def num_check(question, low, high):
 
 def statement_generator(statement, decoration):
 
-            sides = decoration * 3
+    sides = decoration * 3
 
-            statement = "{} {} {}".format(sides, statement, sides)
-            top_bottom = decoration * len(statement)
+    statement = "{} {} {}".format(sides, statement, sides)
+    top_bottom = decoration * len(statement)
 
-            print(top_bottom)
-            print(statement)
-            print(top_bottom)
+    print(top_bottom)
+    print(statement)
+    print(top_bottom)
 
-            return ""
+    return ""
+statement_generator("Welcome tot the Lucky Unicorn Game", "*")
+print()
+statement_generator("Congratulations you got a Unicorn", "!")
 
 
 # Main Routine goes here...
 played_before = yes_no("Have you played the game before? ")
 
 if played_before == "no":
-    instructions()
+    instructions(" Choose a starting amount (minimum $1, maximum $10")
 
 # Ask user how much they want to play with...
 how_much = num_check("How much would you like to play with? ", 0, 10)
@@ -89,12 +92,14 @@ while play_again == "":
     # user gets a unicorn (add  $4 to balance)
     if 1 <= chosen_num <= 5:
         chosen = "unicorn"
+        chosen_dec = "*"
         balance += 4
 
     # if the random # is between 6 and 36
     # user gets a donkey (subtract $1 from balance)
     elif 6 <= chosen_num <= 36:
         chosen = "donkey"
+        chosen_dec = "D"
         balance -= 1
 
     # The token is either an horse or a zebra...
@@ -105,12 +110,15 @@ while play_again == "":
         # item to a horse
         if chosen_num % 2 == 0:
             chosen = "horse"
+            chosen_dec = "H"
         # otherwise set it to a zebra
         else:
             chosen = "zebra"
+            chosen_dec = "Z"
         balance -= 0.5
 
-    print("You got a {}, your balance is ${:.2f}".format(chosen, balance))
+    feedback = "You got a {}, your balance is ${:.2f}".format(chosen, balance)
+    statement_generator(feedback, chosen_dec)
     print()
 
     if balance < 1:
@@ -123,4 +131,4 @@ while play_again == "":
         play_again = input("Push Enter to play or 'xxx' to quit")
 
 print()
-print("Final Balance: ", balance)
+print("Final Balance: ${:.2f} ".format( balance))
