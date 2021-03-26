@@ -46,6 +46,20 @@ def num_check(question, low, high):
             print(error)
 
 
+def statement_generator(statement, decoration):
+
+            sides = decoration * 3
+
+            statement = "{} {} {}".format(sides, statement, sides)
+            top_bottom = decoration * len(statement)
+
+            print(top_bottom)
+            print(statement)
+            print(top_bottom)
+
+            return ""
+
+
 # Main Routine goes here...
 played_before = yes_no("Have you played the game before? ")
 
