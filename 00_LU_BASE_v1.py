@@ -21,7 +21,10 @@ def yes_no(question):
 def instructions():
     print("**** How to play ****")
     print()
-    print("The rules of the game go here")
+    print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1"
+          "and the maximum of $10. "
+          "All you have to do is press <Enter> till you get a unicorn. If you do not succeed in getting a unicorn, feel"
+          "free to restart the game or exit with <xxx>.")
     print()
     return ""
 
@@ -58,10 +61,10 @@ def statement_generator(statement, decoration):
     print(top_bottom)
 
     return ""
-statement_generator("Welcome tot the Lucky Unicorn Game", "*")
-print()
-statement_generator("Congratulations you got a Unicorn", "!")
 
+
+statement_generator("Welcome to the Lucky Unicorn Game", "*")
+print()
 
 # Main Routine goes here...
 played_before = yes_no("Have you played the game before? ")
@@ -131,4 +134,4 @@ while play_again == "":
         play_again = input("Push Enter to play or 'xxx' to quit")
 
 print()
-print("Final Balance: ${:.2f} ".format( balance))
+print("Final Balance: ${:.2f} ".format(balance))
