@@ -12,7 +12,9 @@ def statement_generator(statement, decoration):
 
     return ""
 
-# Main rountine goes here
+# Main routine goes here
+
 statement_generator("Welcome tot the Lucky Unicorn Game", "*")
+
 print()
 statement_generator("Congratulations you got a Unicorn", "!")
