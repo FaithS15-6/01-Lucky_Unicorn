@@ -23,9 +23,10 @@ def instructions():
     print()
     print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1"
           "and the maximum of $10. "
-          "All you have to do is press <Enter> till you get a unicorn. If you do not succeed in getting a unicorn, feel"
-          "free to restart the game or exit with <xxx>.")
-    print()
+          "All you have to do is press <Enter> till you get a unicorn. " "Each round costs $1 "
+         )
+    print("If you do not succeed in getting a unicorn, feel free to restart the game or exit with <xxx>."
+          )
     return ""
 
 
