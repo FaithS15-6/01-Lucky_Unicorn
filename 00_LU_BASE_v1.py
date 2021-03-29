@@ -23,10 +23,12 @@ def instructions():
     print()
     print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1"
           "and the maximum of $10. "
-          "All you have to do is press <Enter> till you get a unicorn. " "Each round costs $1 "
-         )
+          "All you have to do is press <Enter> till you get a unicorn. ")
+    print("Each round costs $1. You win $5 if you get a Unicorn, 50c if you get a horse or zebra. "
+          "but if you get a donkey, you don't get anything. ")
     print("If you do not succeed in getting a unicorn, feel free to restart the game or exit with <xxx>."
           )
+    print("GOOD LUCK! & *HAVE FUN*...")
     return ""
 
 
@@ -136,3 +138,5 @@ while play_again == "":
 
 print()
 print("Final Balance: ${:.2f} ".format(balance))
+
+print("*Thanks For Playing*")
