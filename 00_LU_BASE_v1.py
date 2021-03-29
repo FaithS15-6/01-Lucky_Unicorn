@@ -21,11 +21,11 @@ def yes_no(question):
 def instructions():
     print("**** How to play ****")
     print()
-    print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1"
+    print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1 "
           "and the maximum of $10. "
           "All you have to do is press <Enter> till you get a unicorn. ")
-    print("Each round costs $1. You win $5 if you get a Unicorn, 50c if you get a horse or zebra. "
-          "but if you get a donkey, you don't get anything. ")
+    print("Each round costs $1. You win $5 if you get a Unicorn and 50c if you get a horse or zebra. "
+          "But if you get a donkey, you don't get anything. ")
     print("If you do not succeed in getting a unicorn, feel free to restart the game or exit with <xxx>."
           )
     print("GOOD LUCK! & *HAVE FUN*...")
@@ -33,6 +33,7 @@ def instructions():
 
 
 def num_check(question, low, high):
+    print("")
     error = "Please enter a whole number between 1 and 10\n"
 
     valid = False
