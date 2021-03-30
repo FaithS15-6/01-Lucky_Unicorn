@@ -1,9 +1,6 @@
 import random
 
-
 # Functions go here...
-
-# checks that users answer yes / no to a question
 def yes_no(question):
     valid = False
     while not valid:
@@ -21,24 +18,19 @@ def yes_no(question):
             print("Please answer yes / no")
 
 
-#  Displays instructions (returns "")
 def instructions():
     print("**** How to play ****")
     print()
-    print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1 "
-          "and the maximum of $10. "
-          "All you have to do is press <Enter> till you get a unicorn. ")
-    print("Each round costs $1. You win $5 if you get a Unicorn and 50c if you get a horse or zebra. "
-          "But if you get a donkey, you don't get anything. ")
+    print("In this game, your aim to to get a unicorn. You have to enter a sum of money with the minimum of $1"
+          " and the maximum of $10. ")
+    print("All you have to do is press <Enter> till you get a unicorn. " "Each round costs $1 ")
+    print("")
     print("If you do not succeed in getting a unicorn, feel free to restart the game or exit with <xxx>."
           )
-    print("GOOD LUCK! & *HAVE FUN*...")
     return ""
 
 
-# checks that users enter a number between two end points
 def num_check(question, low, high):
-    print("")
     error = "Please enter a whole number between 1 and 10\n"
 
     valid = False
@@ -58,7 +50,6 @@ def num_check(question, low, high):
             print(error)
 
 
-# Adds characters above and below a statement to make it stand out
 def statement_generator(statement, decoration):
 
     sides = decoration * 3
@@ -145,5 +136,3 @@ while play_again == "":
 
 print()
 print("Final Balance: ${:.2f} ".format(balance))
-
-print("*Thanks For Playing*")
